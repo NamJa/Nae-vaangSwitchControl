@@ -11,16 +11,6 @@ int maxAngle = 30;
 char val;
 int count = 0;
 
-int countVal(char tempval)
-{
-  if(tempval == 'a' && tempval == 'c') 
-  {
-    count = 1;
-  }
-  else {
-    count = 0;
-  }
-}
 
 void setup() {
   // put your setup code here, to run once:
@@ -32,33 +22,30 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  val = (char)bluetooth.read();
-  countVal(val);
-  servo.write(160);
-  delay(1000);
-  servo.write(1);
-  delay(1000);
-//  if(bluetooth.available() && count == 1)
-//  {
-//    Serial.write(val);
-//    if(val == 'a')
-//    {
-//      for(angle = 0; angle < maxAngle*2; angle++)
-//      {
-//        servo.write(angle);
-//        delay(30);
-//      }
-//    } 
-//    else if(val == 'c') 
-//    {
-//      int temp = angle;
-//      for(;angle > temp - maxAngle*2;angle--)
-//      {
-//        servo.write(angle);
-//        delay(15);
-//      }
-//    }
-//  }
+  // 수평
+  // servo.write(60);
+  // 불 켬
+  // servo.write(10);
+  // 불 끔
+  // servo.write(110);
+  
+  if(bluetooth.available())
+  {
+    if(count == 0)
+    {
+      servo.write(60);
+      count = 1;
+    }
+    val = (char)bluetooth.read();
+    Serial.write(val);
+    if(val == 'a')
+    {
+      servo.write(10);
+    } 
+    else if(val == 'b') 
+    {
+      servo.write(110);
+    }
+  }
 }
 
