@@ -7,34 +7,59 @@
     >
 
     <FrameLayout
-        android:id="@+id/noon"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/night"
+        android:layout_width="700dp"
+        android:layout_height="700dp"
         android:clickable="true"
-        android:background="@drawable/ripple_background">
+        android:background="@drawable/nightbackground">
 
-        <ImageView
-            android:id="@+id/whiteonoff"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:src="@drawable/whiteonoff"
-            android:background="@android:color/transparent"
-            />
 
-        <ImageView
-            android:id="@+id/yellowonoff"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
-            android:layout_gravity="center_vertical|center_horizontal"
-            android:src="@drawable/yellowonoff"
-            android:background="@android:color/transparent"
-            />
     </FrameLayout>
+    <ImageView
+        android:id="@+id/yellowonoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:src="@drawable/yellowonoff"
+        android:background="@android:color/transparent"
+        />
+    <FrameLayout
+        android:id="@+id/noon"
+        android:layout_width="700dp"
+        android:layout_height="700dp"
+        android:clickable="true"
+        android:background="@drawable/noon_background">
+        <!-- android:background="#03A9F4"> !-->
+
+
+
+    </FrameLayout>
+    <ImageView
+    android:id="@+id/whiteonoff"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scaleX="0.5"
+    android:scaleY="0.5"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:src="@drawable/whiteonoff"
+    android:background="@android:color/transparent"
+    />
+    <Button
+        android:id="@+id/noonBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="noon"/>
+    <Button
+        android:id="@+id/nightBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="night"
+        android:layout_toRightOf="@id/noonBtn"/>
 
 
 </RelativeLayout>
