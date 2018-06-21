@@ -60,6 +60,19 @@
         android:layout_height="wrap_content"
         android:text="night"
         android:layout_toRightOf="@id/noonBtn"/>
+    <Button
+        android:id="@+id/onehundreddegree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/nightBtn"
+        android:text="110"/>
+    <Button
+        android:id="@+id/tendegree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/onehundreddegree"
+        android:text="10"
+        />
 
 
 </RelativeLayout>
