@@ -46,6 +46,10 @@ void loop() {
     {
       servo.write(110);
     }
+    else if (val == 'c')
+    {
+      servo.write(60);
+    }
   }
 }
 
